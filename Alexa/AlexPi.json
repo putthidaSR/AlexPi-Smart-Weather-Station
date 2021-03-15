@@ -1,0 +1,91 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "alex pi",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "TemperatureIntent",
+                    "slots": [
+                        {
+                            "name": "Indoor_Temperature",
+                            "type": "INDOOR_TEMPERATURE"
+                        }
+                    ],
+                    "samples": [
+                        "what is {Indoor_Temperature} my room",
+                        "{Indoor_Temperature} my room"
+                    ]
+                },
+                {
+                    "name": "AirQualityIntent",
+                    "slots": [
+                        {
+                            "name": "Indoor_Air",
+                            "type": "INDOOR_AIR"
+                        }
+                    ],
+                    "samples": [
+                        "{Indoor_Air} my room",
+                        "what is {Indoor_Air} my room"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "INDOOR_TEMPERATURE",
+                    "values": [
+                        {
+                            "id": "temp",
+                            "name": {
+                                "value": "temp inside",
+                                "synonyms": [
+                                    "indoor temperature",
+                                    "temperature inside"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "INDOOR_AIR",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "air inside",
+                                "synonyms": [
+                                    "air quality inside",
+                                    "air condition inside"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
