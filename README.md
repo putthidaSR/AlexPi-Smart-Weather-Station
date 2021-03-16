@@ -63,7 +63,7 @@ The purpose of this project is to design and implement a practical case of a sma
 6. Install node-red-contrib-alexa-remote2 package on Node-RED and configure it with Amazon Alexa account
 7. Integrate Grafana with InfluxDB
 
-> In this project, we will be running two web servers concurrently with different port numbers:**
+**In this project, we will be running two web servers concurrently with different port numbers:**
 - 5000: Run Flask application to build new Alexa skills with Amazon Alexa Skill Kit Service on Cloud
 - 8086: Run Node-Red to launch local IoT dashboard, control smart devices and insert data into InfluxDB
 
@@ -131,6 +131,10 @@ Full instruction on how to setup ngrok on Raspberry Pi can be found here: `https
 
 
 ## Application Screenshots
-| Edge-based IoT Dashboard (Node-RED) | Edge-based IoT Dashboard (Grafana) | AlexPi Setup |
-| :------: | :--------: | :--------: |
-| ![Node-red](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/IoT+edge+dashboard.jpg) | ![Grafana](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/grafana-dashboard.png) |![AlexPi](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/alexpi-hardware.png) |
+| AlexPi Setup |
+| :------: |
+|![AlexPi](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/alexpi-hardware.png) |
+
+| Edge-based IoT Dashboard (Node-RED) | Edge-based IoT Dashboard (Grafana) |
+| :------: | :--------: |
+| ![Node-red](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/IoT+edge+dashboard.jpg) | ![Grafana](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/grafana-dashboard.png) |
