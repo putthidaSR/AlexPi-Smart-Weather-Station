@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 3,
-  "iteration": 1615772076382,
+  "iteration": 1615852111085,
   "links": [],
   "panels": [
     {
@@ -1348,7 +1348,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "email",
+              "operator": "=~",
+              "value": "/^$Users$/"
+            }
+          ]
         }
       ],
       "thresholds": [],
@@ -1432,12 +1438,12 @@
     ]
   },
   "time": {
-    "from": "now-1h",
-    "to": "now"
+    "from": "2021-03-14T22:00:00.000Z",
+    "to": "2021-03-15T02:00:00.000Z"
   },
   "timepicker": {},
   "timezone": "",
   "title": "AlexPI Advanced Statistics Dashboard",
   "uid": "3t9GR9gRz",
-  "version": 12
+  "version": 13
 }
