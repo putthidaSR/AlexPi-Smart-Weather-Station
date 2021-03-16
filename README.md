@@ -35,7 +35,7 @@ The purpose of this project is to design and implement a practical case of a sma
 - **Programming Language:** Python3, JavaScript
 - **Database:** InfluxDB
 - **Edge Dashboard:** Node-RED, Grafana
-- **Other Services:** Amazon Alexa Skill Kit, ngrok, OpenWeatherMap API
+- **Other Services:** Amazon Alexa Skill Kit, ngrok, OpenWeatherMap API, AWS S3
 
 #### Hardware Requirement:
 - **Raspberry Pi 3 B+**
@@ -63,7 +63,7 @@ The purpose of this project is to design and implement a practical case of a sma
 6. Install node-red-contrib-alexa-remote2 package on Node-RED and configure it with Amazon Alexa account
 7. Integrate Grafana with InfluxDB
 
-**In this project, we will be running two web servers concurrently with different port numbers:**
+> In this project, we will be running two web servers concurrently with different port numbers:**
 - 5000: Run Flask application to build new Alexa skills with Amazon Alexa Skill Kit Service on Cloud
 - 8086: Run Node-Red to launch local IoT dashboard, control smart devices and insert data into InfluxDB
 
@@ -102,6 +102,12 @@ Full instruction on how to setup ngrok on Raspberry Pi can be found here: `https
 ### How to Run the Flask Application:
 - Once you get the above steps setup, open terminal and navigate to where you store AlexaSkill.py file, - Run: `python3 AlexaSkill.py` (or run directly from IDE)
 
+### Configure InfluxDB on Raspberry Pi
+- Install InfluxDB on the Local Raspberry Pi
+- Create User with with all priviledges
+- Create Database on the InfluxDB server that has been created locally
+- Install `node-red-contrib-influxdb` package on Node-RED
+- Configure the InfluxDB output and input nodes on both node red flows using the user and database that was created.
 
 ### Configure Node-RED
 - Install `node-red-contrib-alexa-remote2` package on Node-RED and configure it with your Amazon Alexa account
@@ -110,8 +116,21 @@ Full instruction on how to setup ngrok on Raspberry Pi can be found here: `https
 - Update any sensors in Smart Weather flow to match with your Raspberry Pi and GrovePi setup
 - Update any influxdb-out node on both AccountHandlig and Smart Weather flows
 
+### Integrate Grafana with InfluxDB
+- Install Grafana and run on the Local Raspberry Pi
+- Create User Account on Grafana.
+- Add Datasource on grafana, configure it to the created InfluxDB database
+- Select new Dashboard and import `AlexPi_Advanced_Statistics_Dashboard.json` from the /Grafana directory
+- Configure time series and username to your liking
+
 ----
 
 ## Developer Notes
-> We are using the free version of ngrok so we do not have any reserved domains for the endpoint. For free version, the HTTPS URL endpoint from ngrok is updated each time you start a tunnel. You must also update Endpoint on Alexa Skill Kit service with the new HTTPS endpoint each time the endpoint from ngrok is changing.
-> The Flask web server is running on port 5000. If you already use this port number for other purposes, please update the port number in AlexaSkill.py file.
+- We are using the free version of ngrok so we do not have any reserved domains for the endpoint. For free version, the HTTPS URL endpoint from ngrok is updated each time you start a tunnel. You must also update Endpoint on Alexa Skill Kit service with the new HTTPS endpoint each time the endpoint from ngrok is changing.
+- The Flask web server is running on port 5000. If you already use this port number for other purposes, please update the port number in AlexaSkill.py file.
+
+
+## Application Screenshots
+| Edge-based IoT Dashboard (Node-RED) | Edge-based IoT Dashboard (Grafana) | AlexPi Setup |
+| :------: | :--------: | :--------: |
+| ![Node-red](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/IoT+edge+dashboard.jpg) | ![Grafana](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/grafana-dashboard.png) |![AlexPi](https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/alexpi-hardware.png) |
