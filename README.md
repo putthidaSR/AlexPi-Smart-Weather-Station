@@ -5,7 +5,7 @@
  <b>TCSS 573: Internet of Things – Winter 2021</b><br><br>
 </p>
 
-The purpose of this project is to design and implement a practical case of a smart home hub using Raspberry Pi. 
+The purpose of this project is to design and implement a practical case of a smart home hub using Raspberry Pi. We propose a cheaper solution to build a smart home hub to monitor both indoor and outdoor temperature and air quality that can be expanded overtime, and comes with user-friendly IoT edge-based dashboards for authenticated users to automate and control Amazon Alexa-integrated smart home devices; and view historical data. Our system is integrated with Amazon Alexa Skill which gives users the ability to issue voice commands from Amazon Echo devices or remotely from the Alexa Mobile application.
 
 -----
 
