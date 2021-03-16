@@ -131,9 +131,6 @@ Full instruction on how to setup ngrok on Raspberry Pi can be found here: `https
 
 
 ## Application Screenshots
-| AlexPi Setup |
-| :------: |
-|<img src="https://tcss573-iot-thida.s3.us-east-2.amazonaws.com/alexpi-hardware.png" width="500">|
 
 | Edge-based IoT Dashboard (Node-RED) | Edge-based IoT Dashboard (Grafana) |
 | :------: | :--------: |
