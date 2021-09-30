@@ -1,13 +1,4 @@
 # ***************************************************************************************************
-# TCSS 573: Internet of Things (IoT)
-# Winter 2021 | Final Project
-#
-# Group 10
-# Name: Putthida Samrith, Jordan Overbo
-# Date: March 14, 2021
-# 
-# File Name: AlexaSkill.py
-#
 # This script is written in Python3 to create a webserver instance using Flask, 
 # detect values from GrovePi sensors, and communicate with Alexa Skill Kit Service on Cloud using Python package Flask-Ask 
 # to build new skill sets for Alexa devices.
