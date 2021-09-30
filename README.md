@@ -1,10 +1,5 @@
 <h1 align="center">AlexPi - Smart Home Hub</h1>
 
-<p align="center">
- <b><br>University of Washington Tacoma</b><br>
- <b>TCSS 573: Internet of Things – Winter 2021</b><br><br>
-</p>
-
 The purpose of this project is to design and implement a practical case of a smart home hub using Raspberry Pi. We propose a cheaper solution to build a smart home hub to monitor both indoor and outdoor temperature and air quality that can be expanded overtime, and comes with user-friendly IoT edge-based dashboards for authenticated users to automate and control Amazon Alexa-integrated smart home devices; and view historical data. Our system is integrated with Amazon Alexa Skill which gives users the ability to issue voice commands from Amazon Echo devices or remotely from the Alexa Mobile application.
 
 -----
@@ -73,7 +68,7 @@ The purpose of this project is to design and implement a practical case of a sma
 
 ### Expose a local web server to the internet:
 
-We use ngrok to expose a web server running on our Raspberry Pi to be publicly accessbile on the Internet so that it can communicate with Alexa Skill Kit Service.
+ngrok is used to expose a web server running on your Raspberry Pi to be publicly accessbile on the Internet so that it can communicate with Alexa Skill Kit Service.
 
 - Create a free ngrok account: dashboard.ngrok.com/signup
 - Copy the authentication token found in your ngrok dashboard
